@@ -16,24 +16,26 @@ protocol GitHubPresenter {
 final class GitHubPresenterImpl: GitHubPresenter {
     weak var view: GitHubViewController?
     
+    @MainActor
     func addRepositoriesToView(_ repos: [RepositoryModel]) {
         view?.model += repos
         refresh()
     }
     
+    @MainActor
     func deleteRepositoryFromView(by index: Int) {
         view?.model.remove(at: index)
         refresh()
     }
     
+    @MainActor 
     func editRepositoryOnView(at index: Int, new repo: RepositoryModel) {
         view?.model[index] = repo
         refresh()
     }
     
+    @MainActor
     private func refresh() {
-        DispatchQueue.main.async { [weak self] in
-            self?.view?.tableView.reloadData()
-        }
+        view?.tableView.reloadData()
     }
 }

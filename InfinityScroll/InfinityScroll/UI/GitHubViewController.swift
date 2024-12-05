@@ -6,21 +6,10 @@
 //
 
 import UIKit
-
-// TODO: - delete
-let image: UIImage? = UIImage(systemName: "gear")
-let image2: UIImage? = UIImage(systemName: "box.truck")
-
-let models: [RepositoryModel] = [
-    .init(title: "aaaa", subtitle: "final class CardTableViewController: UITableViewController {var cards: [CardModel] = []override func viewDidLoad() {super.viewDidLoad() view.backgroundColor = .white } private func setupCells() { tableView.register(CardCell.self, forCellReuseIdentifier: CardCell.reuseId) } override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { cards.count } override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell { if let cell = tableView.dequeueReusableCell(withIdentifier: CardCell.reuseId, for: indexPath) as? CardCell { cell.setup(with: .init(cards[indexPath.row])) return cell } return UITableViewCell() }", iconUrl: URL(string: "https://avatars.githubusercontent.com/u/1540564?v=4")),
-    .init(title: "Aaa testing CardTableViewController: UITableViewController {var cards: [CardModel] = []override func viewDidLoad() {super.viewDidLoad() view.backgroundColor = .white }", subtitle: "final class}", iconUrl: URL(string: "https://avatars.githubusercontent.com/u/1540534?v=4")),
-    .init(title: "Aaa test", subtitle: "", iconUrl: URL(string: "https://avatars.githubusercontent.com/u/1240564?v=4")),
-    .init(title: "Aaa testing CardTableViewController: UITableViewController {var cards: [CardModel] = []override func viewDidLoad() {super.viewDidLoad() view.backgroundColor = .white }", subtitle: "", iconUrl: URL(string: "https://avatars.githubusercontent.com/u/1540565?v=4")),
-    .init(title: "", subtitle: "Aaa testing CardTableViewController: UITableViewController {var cards: [CardModel] = []override func viewDidLoad() {super.viewDidLoad() view.backgroundColor = .white }", iconUrl: URL(string: "https://avatars.githubusercontent.com/u/6258906?v=4")),
-]
+import SpriteKit
 
 final class GitHubViewController: UITableViewController {
-    var model: [RepositoryModel] = []// []) // models) // [])
+    var model: [RepositoryModel] = []
     
     private let interactor: GitHubInteractor
     
@@ -39,11 +28,6 @@ final class GitHubViewController: UITableViewController {
         setupCells()
         interactor.loadStart()
         print("view did load")
-    }
-    
-    private func setupCells() {
-        tableView.register(RepositoryCell.self, forCellReuseIdentifier: RepositoryCell.reuseId)
-        tableView.allowsSelection = false
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -79,6 +63,21 @@ final class GitHubViewController: UITableViewController {
         deleteAction.image = UIImage.trash
         deleteAction.backgroundColor = UIColor(red: 0.8, green: 0.5, blue: 0.5, alpha: 1)
         return UISwipeActionsConfiguration(actions: [deleteAction])
+    }
+    
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row > model.count - 50 {
+            needMoreRepositories()
+        }
+    }
+    
+    private func setupCells() {
+        tableView.register(RepositoryCell.self, forCellReuseIdentifier: RepositoryCell.reuseId)
+        tableView.allowsSelection = false
+    }
+    
+    private func needMoreRepositories() {
+        interactor.loadMoreRepositories()
     }
     
     private func handleDelete(indexPath: IndexPath) {

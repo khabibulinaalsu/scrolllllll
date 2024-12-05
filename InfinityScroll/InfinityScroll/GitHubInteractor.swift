@@ -18,6 +18,7 @@ final class GitHubInteractorImpl: GitHubInteractor {
     private let presenter: GitHubPresenter
     private let worker: GitHubWorker
     private var loadMoreIsAvailable = true
+    private var isLoading = false
     
     init(presenter: GitHubPresenter, worker: GitHubWorker) {
         self.presenter = presenter
@@ -53,8 +54,9 @@ final class GitHubInteractorImpl: GitHubInteractor {
     }
     
     func loadMoreRepositories() {
-        if loadMoreIsAvailable {
+        if loadMoreIsAvailable && !isLoading {
             print("try to load repos from internet")
+            isLoading = true
             // Вот бы еще проверять на дубликаты, но это уже совсем другая история
             worker.fetchRepositories { [weak self] result in
                 print("have completion from loading from internet")
@@ -73,6 +75,7 @@ final class GitHubInteractorImpl: GitHubInteractor {
                     print("oopsi, have some troubles with internet")
                     self?.loadMoreIsAvailable = false
                 }
+                self?.isLoading = false
             }
         }
     }
