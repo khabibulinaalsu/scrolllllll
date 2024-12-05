@@ -12,11 +12,13 @@
 		9320B03A2D01E98100372E50 /* AppBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9320B0392D01E98100372E50 /* AppBuilder.swift */; };
 		9320B03C2D01F78D00372E50 /* RepositoryStorageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9320B03B2D01F78D00372E50 /* RepositoryStorageModel.swift */; };
 		9320B0402D01FF9C00372E50 /* RepositoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9320B03F2D01FF9C00372E50 /* RepositoryModel.swift */; };
+		9320B0422D02278300372E50 /* MockWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9320B0412D02278300372E50 /* MockWorker.swift */; };
+		9320B0442D02297B00372E50 /* MockPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9320B0432D02297B00372E50 /* MockPresenter.swift */; };
 		93AE71432CFFC73F0037D01A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AE71422CFFC73F0037D01A /* AppDelegate.swift */; };
 		93AE71452CFFC73F0037D01A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AE71442CFFC73F0037D01A /* SceneDelegate.swift */; };
 		93AE714C2CFFC7410037D01A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93AE714B2CFFC7410037D01A /* Assets.xcassets */; };
 		93AE714F2CFFC7410037D01A /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 93AE714E2CFFC7410037D01A /* Base */; };
-		93AE715A2CFFC7410037D01A /* InfinityScrollTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AE71592CFFC7410037D01A /* InfinityScrollTests.swift */; };
+		93AE715A2CFFC7410037D01A /* GitHubInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AE71592CFFC7410037D01A /* GitHubInteractorTests.swift */; };
 		93AE71732D01868C0037D01A /* RepositoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AE71722D01868C0037D01A /* RepositoryCell.swift */; };
 		93AE71752D018E640037D01A /* GitHubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AE71742D018E640037D01A /* GitHubViewController.swift */; };
 		93AE71772D0197510037D01A /* NetworkWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AE71762D0197510037D01A /* NetworkWorker.swift */; };
@@ -38,13 +40,6 @@
 			remoteGlobalIDString = 93AE713E2CFFC73E0037D01A;
 			remoteInfo = InfinityScroll;
 		};
-		93AE71602CFFC7410037D01A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 93AE71372CFFC73E0037D01A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 93AE713E2CFFC73E0037D01A;
-			remoteInfo = InfinityScroll;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +48,9 @@
 		9320B0392D01E98100372E50 /* AppBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBuilder.swift; sourceTree = "<group>"; };
 		9320B03B2D01F78D00372E50 /* RepositoryStorageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryStorageModel.swift; sourceTree = "<group>"; };
 		9320B03F2D01FF9C00372E50 /* RepositoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryModel.swift; sourceTree = "<group>"; };
+		9320B0412D02278300372E50 /* MockWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockWorker.swift; sourceTree = "<group>"; };
+		9320B0432D02297B00372E50 /* MockPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPresenter.swift; sourceTree = "<group>"; };
+		9320B0452D0241B200372E50 /* InfinityScroll.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = InfinityScroll.xctestplan; sourceTree = "<group>"; };
 		93AE713F2CFFC73F0037D01A /* InfinityScroll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InfinityScroll.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93AE71422CFFC73F0037D01A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93AE71442CFFC73F0037D01A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,8 +58,7 @@
 		93AE714E2CFFC7410037D01A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		93AE71502CFFC7410037D01A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93AE71552CFFC7410037D01A /* InfinityScrollTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InfinityScrollTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		93AE71592CFFC7410037D01A /* InfinityScrollTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfinityScrollTests.swift; sourceTree = "<group>"; };
-		93AE715F2CFFC7410037D01A /* InfinityScrollUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InfinityScrollUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		93AE71592CFFC7410037D01A /* GitHubInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubInteractorTests.swift; sourceTree = "<group>"; };
 		93AE71722D01868C0037D01A /* RepositoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCell.swift; sourceTree = "<group>"; };
 		93AE71742D018E640037D01A /* GitHubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubViewController.swift; sourceTree = "<group>"; };
 		93AE71762D0197510037D01A /* NetworkWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkWorker.swift; sourceTree = "<group>"; };
@@ -84,13 +81,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		93AE71522CFFC7410037D01A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		93AE715C2CFFC7410037D01A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -142,6 +132,7 @@
 		93AE71362CFFC73E0037D01A = {
 			isa = PBXGroup;
 			children = (
+				9320B0452D0241B200372E50 /* InfinityScroll.xctestplan */,
 				93AE71412CFFC73F0037D01A /* InfinityScroll */,
 				93AE71582CFFC7410037D01A /* InfinityScrollTests */,
 				93AE71402CFFC73F0037D01A /* Products */,
@@ -153,7 +144,6 @@
 			children = (
 				93AE713F2CFFC73F0037D01A /* InfinityScroll.app */,
 				93AE71552CFFC7410037D01A /* InfinityScrollTests.xctest */,
-				93AE715F2CFFC7410037D01A /* InfinityScrollUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -180,7 +170,9 @@
 		93AE71582CFFC7410037D01A /* InfinityScrollTests */ = {
 			isa = PBXGroup;
 			children = (
-				93AE71592CFFC7410037D01A /* InfinityScrollTests.swift */,
+				93AE71592CFFC7410037D01A /* GitHubInteractorTests.swift */,
+				9320B0412D02278300372E50 /* MockWorker.swift */,
+				9320B0432D02297B00372E50 /* MockPresenter.swift */,
 			);
 			path = InfinityScrollTests;
 			sourceTree = "<group>";
@@ -233,24 +225,6 @@
 			productReference = 93AE71552CFFC7410037D01A /* InfinityScrollTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		93AE715E2CFFC7410037D01A /* InfinityScrollUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 93AE716F2CFFC7410037D01A /* Build configuration list for PBXNativeTarget "InfinityScrollUITests" */;
-			buildPhases = (
-				93AE715B2CFFC7410037D01A /* Sources */,
-				93AE715C2CFFC7410037D01A /* Frameworks */,
-				93AE715D2CFFC7410037D01A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				93AE71612CFFC7410037D01A /* PBXTargetDependency */,
-			);
-			name = InfinityScrollUITests;
-			productName = InfinityScrollUITests;
-			productReference = 93AE715F2CFFC7410037D01A /* InfinityScrollUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -265,10 +239,6 @@
 						CreatedOnToolsVersion = 15.4;
 					};
 					93AE71542CFFC7410037D01A = {
-						CreatedOnToolsVersion = 15.4;
-						TestTargetID = 93AE713E2CFFC73E0037D01A;
-					};
-					93AE715E2CFFC7410037D01A = {
 						CreatedOnToolsVersion = 15.4;
 						TestTargetID = 93AE713E2CFFC73E0037D01A;
 					};
@@ -289,7 +259,6 @@
 			targets = (
 				93AE713E2CFFC73E0037D01A /* InfinityScroll */,
 				93AE71542CFFC7410037D01A /* InfinityScrollTests */,
-				93AE715E2CFFC7410037D01A /* InfinityScrollUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -305,13 +274,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		93AE71532CFFC7410037D01A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		93AE715D2CFFC7410037D01A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -350,14 +312,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93AE715A2CFFC7410037D01A /* InfinityScrollTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		93AE715B2CFFC7410037D01A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				93AE715A2CFFC7410037D01A /* GitHubInteractorTests.swift in Sources */,
+				9320B0442D02297B00372E50 /* MockPresenter.swift in Sources */,
+				9320B0422D02278300372E50 /* MockWorker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,11 +325,6 @@
 			isa = PBXTargetDependency;
 			target = 93AE713E2CFFC73E0037D01A /* InfinityScroll */;
 			targetProxy = 93AE71562CFFC7410037D01A /* PBXContainerItemProxy */;
-		};
-		93AE71612CFFC7410037D01A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 93AE713E2CFFC73E0037D01A /* InfinityScroll */;
-			targetProxy = 93AE71602CFFC7410037D01A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -597,40 +549,6 @@
 			};
 			name = Release;
 		};
-		93AE71702CFFC7410037D01A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ru.khabibulina.InfinityScrollUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = InfinityScroll;
-			};
-			name = Debug;
-		};
-		93AE71712CFFC7410037D01A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ru.khabibulina.InfinityScrollUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = InfinityScroll;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -657,15 +575,6 @@
 			buildConfigurations = (
 				93AE716D2CFFC7410037D01A /* Debug */,
 				93AE716E2CFFC7410037D01A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		93AE716F2CFFC7410037D01A /* Build configuration list for PBXNativeTarget "InfinityScrollUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				93AE71702CFFC7410037D01A /* Debug */,
-				93AE71712CFFC7410037D01A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -1,0 +1,38 @@
+{
+  "configurations" : [
+    {
+      "id" : "B0224676-1FFE-4B66-9A17-3F4791684D8F",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:InfinityScroll.xcodeproj",
+      "identifier" : "93AE713E2CFFC73E0037D01A",
+      "name" : "InfinityScroll"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:InfinityScroll.xcodeproj",
+        "identifier" : "93AE71542CFFC7410037D01A",
+        "name" : "InfinityScrollTests"
+      }
+    },
+    {
+      "enabled" : false,
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:InfinityScroll.xcodeproj",
+        "identifier" : "93AE715E2CFFC7410037D01A",
+        "name" : "InfinityScrollUITests"
+      }
+    }
+  ],
+  "version" : 1
+}
